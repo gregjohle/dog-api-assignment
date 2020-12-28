@@ -12,8 +12,18 @@
 
 <body>
 
-    <div class="container">
-        <h1>Dog API: A Simple Example</h1>
+    <div class="partOne">
+        <h1>Dog API: A Simple Example - Part One</h1>
+
+        <form>
+            <label for="numberOfDogs">Number of Dogs to Display (1 - 50):</label>
+            <input type="number" id="numberOfDogs" min="1" max="50" default="3">
+            <input type="submit" value="Get a dog pic!">
+        </form>
+    </div>
+
+    <div class="partTwo">
+        <h1>Dog API: A Simple Example - Part Two</h1>
 
         <form>
             <label for="numberOfDogs">Number of Dogs to Display (1 - 50):</label>
@@ -26,6 +36,22 @@
         </section>
     </div>
 
+    <div class="partThree">
+        <h1>Dog API: A Simple Example - Part Three</h1>
+
+        <form>
+            <label for="breedOfDogs">Input a Breed You Would Like to See:</label>
+            <input type="text" id="breedOfDogs">
+            <input type="submit" value="Get a dog pic!">
+        </form>
+        <section class="results hidden">
+            <h2>Look at this display of adorableness!</h2>
+            <img class="results-img" alt="placeholder">
+        </section>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
     <script src="partOne.js"></script>
+    <script src="partTwo.js"></script>
+    <script src="partThree.js"></script>
 </body>
