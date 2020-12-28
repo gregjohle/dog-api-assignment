@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Part One - Dog API</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Dog API: A Simple Example</h1>
+
+        <form>
+            <label for="numberOfDogs">Number of Dogs to Display (1 - 50):</label>
+            <input type="number" id="numberOfDogs" min="1" max="50" default="3">
+            <input type="submit" value="Get a dog pic!">
+        </form>
+        <section class="results hidden">
+            <h2>Look at this display of adorableness!</h2>
+            <img class="results-img" alt="placeholder">
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="partOne.js"></script>
+</body>
