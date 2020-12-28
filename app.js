@@ -30,7 +30,7 @@ function displayResults(responseJson) {
     console.log(responseJson);
     let responseStatus = responseJson.status;
     let imageUrls = responseJson.message;
-
+    $('.results').removeClass('hidden');
     if (responseStatus === "success") {
         for (let i = 0; i < imageUrls.length; i++) {
             $('#js-results').append(
