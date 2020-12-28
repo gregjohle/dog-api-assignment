@@ -11,31 +11,33 @@
 </head>
 
 <body>
+    <h1>Dog API: A Simple Example</h2>
+        <div class="controls">
+            <div class="partOne">
+                <h2>Option 1</h1>
 
-    <div class="partOne">
-        <h1>Dog API: A Simple Example - Part One</h1>
+    <form>
+        <label for="numberOfDogs">Number of Dogs to Display (1 - 50):</label>
+        <input type="number" name="number" id="numberOfDogs" class="partOneNum" min="1" max="50" default="3">
+        <input type="submit" class="submit" value="Get a dog pic!">
+    </form>
 
-        <form>
-            <label for="numberOfDogs">Number of Dogs to Display (1 - 50):</label>
-            <input type="number" name="number" id="numberOfDogs" class="partOneNum" min="1" max="50" default="3">
-            <input type="submit" class="submit" value="Get a dog pic!">
-        </form>
     </div>
-
-    <div class="partThree hidden">
-        <h1>Dog API: A Simple Example - Part Three</h1>
+    <div class="breed">
+        <h2>Option 2</h2>
 
         <form>
             <label for="breedOfDogs">Input a Breed You Would Like to See:</label>
             <input type="text" name="breed" id="breedOfDogs">
             <input type="submit" class="submit" value="Get a dog pic!">
         </form>
-        <section class="results hidden">
-            <h2>Look at this display of adorableness!</h2>
-            <img class="results-img" alt="placeholder">
-        </section>
     </div>
+    </div>
+    <section class="results">
+        <ul id="js-results">
 
+        </ul>
+    </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
