@@ -1,5 +1,19 @@
 // This is the JavaScript for part one of this assignment
 
+function resultsTemplate(doggy) {
+    return `<img src="${doggy}" class="doge" alt="an adorable picture of a wonderful dog"`
+};
+
+function displayResults(responseJson) {
+    var indexDoggos = responseJson.message.length;
+    for (let i = 0; i < indexDoggos; i++) {
+        var picRaw = responseJson.array[i];
+        var picFormat = resultsTemplate(picRaw);
+        $('.results').append(picFormat);
+    };
+    $('.results').removeClass('.hidden');
+};
+
 // This function fetches the images from the Dog API
 function getDogImages(number) {
     var doggos = `https://dog.ceo/api/breeds/image/random/${number}`
@@ -13,20 +27,9 @@ function getDogImages(number) {
         .catch(error => alert('An error has occurred. Please try again later.'));
 };
 
-
-
-// This function listens for the submit on part one and passes the form value to the getDogImages function
+// This function listens for the submit on part one and part two and passes the form value to the getDogImages function
 function watchForm() {
     $('.partOne').submit(function(event) {
-        event.preventDefault();
-        var numDoggos = $('input[name="number"]').val();
-        getDogImages(numDoggos);
-    });
-};
-
-// This function listens for the submit on form two and passes the form value to the getDogImages function
-function watchForm() {
-    $('.partTwo').submit(function(event) {
         event.preventDefault();
         var numDoggos = $('input[name="number"]').val();
         getDogImages(numDoggos);
